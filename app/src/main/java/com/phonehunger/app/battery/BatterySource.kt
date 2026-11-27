@@ -1,5 +1,6 @@
 package com.phonehunger.app.battery
 
+import com.phonehunger.app.DebugBatteryOverride
 import android.content.*
 import android.os.BatteryManager
 import android.os.Build
@@ -8,6 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 object BatteryState {
     val snapshot = MutableStateFlow<BatterySnapshot?>(null)
     fun fromIntent(intent: Intent): BatterySnapshot? {
+        DebugBatteryOverride.snapshot?.let { return it }
         val level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
         val scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
         if (level < 0 || scale <= 0) return null

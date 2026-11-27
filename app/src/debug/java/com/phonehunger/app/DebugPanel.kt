@@ -6,13 +6,22 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import com.phonehunger.app.battery.BatterySnapshot
+import com.phonehunger.app.battery.BatteryState
 import com.phonehunger.app.monitor.MonitorService
 
 object FakeBatterySource {
     fun send(context: Context, level: Int, plugged: Boolean) {
+        val simulated = BatterySnapshot(level, plugged, level == 100 && plugged, System.currentTimeMillis())
+        DebugBatteryOverride.snapshot = simulated
+        BatteryState.snapshot.value = simulated
         context.startService(Intent(context, MonitorService::class.java).setAction(MonitorService.ACTION_DEBUG_BATTERY)
             .putExtra("level", level).putExtra("plugged", plugged))
     }
+}
+
+object DebugBatteryOverride {
+    @Volatile var snapshot: BatterySnapshot? = null
 }
 
 @Composable fun DebugPanel(enabled: Boolean) {
