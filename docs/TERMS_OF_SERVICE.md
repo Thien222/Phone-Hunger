@@ -1,0 +1,5 @@
+# Terms draft / Dự thảo điều khoản
+
+**Owner review required before publication.** PhoneHunger PRO is intended as a one-time non-consumable purchase through Google Play, tied to the purchasing Google account and subject to Google Play refund and payment rules. It is not a subscription. Features depend on Android permission, installed offline TTS voices, and device behavior; background execution is not guaranteed on every device. Users are responsible for rights to audio they import or record. The app must not be used to impersonate another person's voice without permission.
+
+**Cần chủ dự án duyệt trước khi công bố.** PhoneHunger PRO dự kiến là giao dịch mua một lần, không tiêu thụ, qua Google Play; gắn với tài khoản Google mua hàng và tuân theo quy định hoàn tiền/thanh toán của Play. Đây không phải gói đăng ký. Tính năng phụ thuộc quyền Android, giọng TTS offline trên máy và cách thiết bị vận hành; không bảo đảm chạy nền liên tục trên mọi máy. Người dùng chịu trách nhiệm về quyền sử dụng âm thanh nhập hoặc ghi. Không dùng ứng dụng để giả mạo giọng người khác khi chưa được cho phép.

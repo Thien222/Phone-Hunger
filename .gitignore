@@ -1,0 +1,14 @@
+.gradle/
+build/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+.gradle-local/
+.wrapper-bootstrap/
+.android-sdk/
+.android-local/
+*.log
+.android/
+.serena/
